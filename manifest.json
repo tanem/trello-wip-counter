@@ -1,0 +1,19 @@
+ {
+  "manifest_version": 2,
+  "name": "Atomic Trello WIP counter",
+  "description": "Displays WIP",
+  "version": "1.0.0",
+  "content_scripts": [{
+    "matches": ["https://trello.com/b/q2gGORV8/*"],
+    "js": ["jquery-2.2.3.min.js", "content.js"],
+    "css": ["content.css"]
+  }],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "history"
+  ]
+}

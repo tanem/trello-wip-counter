@@ -1,0 +1,29 @@
+.Lozenge {
+  background-color: #61bd4f;
+  border-radius: 3px;
+  color: #fff;
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 1px 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.Lozenge--header {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 6px;
+  top: -1px;
+}
+
+.Lozenge--list {
+  padding: 2px 6px;
+  position: absolute;
+  right: 28px;
+  top: 5px;
+}
+
+.is-over {
+  background-color: #b04632;
+}
