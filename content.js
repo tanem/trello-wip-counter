@@ -3,6 +3,8 @@ var $headerLozenge;
 var $listLozenges;
 var frameId;
 var isRunning = false;
+var kanbanBoardRegex = /q2gGORV8/;
+var WIPLimit = 11;
 
 // Start immediatly if the URL matches according to
 // manifest.json:content_scripts.
@@ -15,7 +17,7 @@ chrome.runtime.onMessage.addListener(start);
 // There tends to be a spew of events, so we need to ensure we keep track of
 // the running status.
 function start(url) {
-  if (!url || /q2gGORV8/.test(url)) {
+  if (!url || kanbanBoardRegex.test(url)) {
     if (!isRunning) {
       isRunning = true;
       setup();
@@ -27,9 +29,6 @@ function start(url) {
 }
 
 function setup() {
-  const WIPLimit = 11;
-  const refreshInterval = 3000;
-
   const $lists = selectList('Ready')
     .nextUntil(selectList('Deployed'));
 
