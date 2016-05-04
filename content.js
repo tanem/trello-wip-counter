@@ -30,7 +30,7 @@ function setup() {
   const WIPLimit = 11;
   const refreshInterval = 3000;
 
-  const $lists = selectList('Design')
+  const $lists = selectList('Ready')
     .nextUntil(selectList('Deployed'));
 
   $headerLozenge = $('<span class="Lozenge Lozenge--header"></span>')
