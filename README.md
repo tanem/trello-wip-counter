@@ -1,5 +1,7 @@
 # trello wip counter
 
+> **Unmaintained.** This project is no longer maintained and the repository is archived.
+
 _WIP_
 
 ## installation
